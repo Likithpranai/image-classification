@@ -1,0 +1,74 @@
+.custom-circle-image {
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  overflow: hidden;
+  border-radius: 50%; /* Make it circular */
+}
+
+.custom-circle-image img {
+  width: 100%; /* Make image fill the container */
+  height: 100%; /* Make image fill the container */
+  object-fit: cover; /* Cover the area without stretching */
+}
+
+.card-wrapper {
+  margin: 5% 0;
+}
+
+/* Adjust the image size for better responsiveness */
+.custom-circle-image {
+  width: 10vw; /* Responsive width */
+  height: 10vw; /* Responsive height */
+}
+
+.celebrity-name {
+  font-size: 0.8rem; /* Reduced font size for celebrity names */
+}
+
+.card-title {
+  letter-spacing: 1.1px;
+}
+
+.card-text {
+  font-family: MerriweatherRegular;
+  font-size: 22px;
+  line-height: initial;
+}
+
+.dropzone {
+  border-style: dashed;
+  border-width: 2px; /* Increased border width for better visibility */
+  height: 200px; /* Set a fixed height for the dropzone */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.error {
+  font-family: MerriweatherRegular;
+  font-size: 30px;
+  line-height: initial;
+  color: blue;
+  text-align: center;
+}
+
+#classTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#classTable td,
+#classTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#classTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}

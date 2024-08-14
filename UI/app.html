@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Person Classifier</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./dropzone.min.css" />
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+      <a class="navbar-brand" href="#">Celebrity Classification</a>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col card-wrapper" data-player="robert_downey_junior">
+          <div class="card border-0">
+            <div
+              class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+            >
+              <img
+                class="w-100 h-100"
+                src="./images/robert.jpg"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center mt-4">
+              <h4 class="text-uppercase card-title celebrity-name">
+                Robert Downey Jr.
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col card-wrapper" data-player="chris_evans">
+          <div class="card border-0">
+            <div
+              class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+            >
+              <img
+                class="w-100 h-100"
+                src="./images/chris_e.jpg"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center mt-4">
+              <h4 class="text-uppercase card-title celebrity-name">
+                Chris Evans
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col card-wrapper" data-player="chris_hemsworth">
+          <div class="card border-0">
+            <div
+              class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+            >
+              <img
+                class="w-100 h-100"
+                src="./images/chris_h.webp"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center mt-4">
+              <h4 class="text-uppercase card-title celebrity-name">
+                Chris Hemsworth
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col card-wrapper" data-player="tom_holland">
+          <div class="card border-0">
+            <div
+              class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+            >
+              <img
+                class="w-100 h-100"
+                src="./images/tom.jpg"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center mt-4">
+              <h4 class="text-uppercase card-title celebrity-name">
+                Tom Holland
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col card-wrapper" data-player="elizabeth_olsen">
+          <div class="card border-0">
+            <div
+              class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image"
+            >
+              <img
+                class="w-100 h-100"
+                src="./images/elizabeth.jpg"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center mt-4">
+              <h4 class="text-uppercase card-title celebrity-name">
+                Elizabeth Olsen
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-12 mx-auto">
+              <form action="/file-upload" class="dropzone" id="dropzone">
+                <div class="dz-message needsclick">
+                  <img
+                    src="./images/drop.png"
+                    width="50vw"
+                    height="50vw"
+                  /><br />
+                  <span class="note needsclick"
+                    >Drop files here or click to upload</span
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-3 mx-auto">
+              <button id="submitBtn" type="button" class="btn btn-success">
+                Classify
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8 error" id="error">
+          <p>
+            Can't classify image. Classifier was not able to detect face and two
+            eyes properly
+          </p>
+        </div>
+
+        <div class="col-sm-4" id="resultHolder"></div>
+        <div class="col-sm-4" id="divClassTable">
+          <table id="classTable">
+            <tr>
+              <th>Celebrity</th>
+              <th>Probability Score</th>
+            </tr>
+            <tr>
+              <td>Robert Downey Jr</td>
+              <td id="score_robert_downey_junior"></td>
+            </tr>
+            <tr>
+              <td>Chris Evans</td>
+              <td id="score_chris_evans"></td>
+            </tr>
+            <tr>
+              <td>Chris Hemsworth</td>
+              <td id="score_chris_hemsworth"></td>
+            </tr>
+            <tr>
+              <td>Tom Holland</td>
+              <td id="score_tom_holland"></td>
+            </tr>
+            <tr>
+              <td>Elizabeth Olsen</td>
+              <td id="score_elizabeth_olsen"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./dropzone.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
